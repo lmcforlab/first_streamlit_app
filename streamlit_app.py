@@ -60,5 +60,5 @@ streamlit.dataframe(my_data_row)
 #fruits_to_show = my_fruit_list.loc[add_my_fruit]
 #streamlit.dataframe(fruits_to_show)
 
-fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
-streamlit.write('Thanks for adding ', fruit_choice)
+fruit_selected = streamlit.text_input('What fruit would you like information about?','Kiwi')
+streamlit.write('Thanks for adding ', fruit_selected)
