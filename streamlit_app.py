@@ -67,5 +67,5 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # streamlit.dataframe(my_fruit_list)
 streamlit.dataframe(fruits_to_show)
 
-streamlit.write('Thanks for adding  ', fruits_selected)
+streamlit.write('Thanks for adding  ', fruits_to_show)
 
