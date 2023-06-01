@@ -56,8 +56,16 @@ streamlit.header("The fruit load list contains:")
 # streamlit.text(my_data_row)
 streamlit.dataframe(my_data_row)
 
-add_my_fruit = streamlit.text_input('What fruit do you want to add?')
-if not add_my_fruit:
-   streamlit.text('Please enter a  fruit')
-else:
-   streamlit.write('The user entered ', add_my_fruit)
+#add_my_fruit = streamlit.text_input('What fruit do you want to add?', '')
+#fruits_to_show = my_fruit_list.loc[add_my_fruit]
+#streamlit.dataframe(fruits_to_show)
+
+fruits_selected = streamlit.multiselect("What fruit do you want to add?", list(my_fruit_list.index))
+fruits_to_show = my_fruit_list.loc[fruits_selected]
+
+# Display the table on the page.
+# streamlit.dataframe(my_fruit_list)
+streamlit.dataframe(fruits_to_show)
+
+streamlit.write('The user entered ', fruit_choice)
+
